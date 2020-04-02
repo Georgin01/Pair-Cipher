@@ -3,7 +3,7 @@
 // "Вешаем" обработчик на каждое событие и применяем функцию шифрования к объекту вывода
 
 export default function outputFunc(message, key, decode, output, pairCipher) {
-  message.addEventListener('input', () => {
+  message.addEventListener('input', function () {
     const { value } = this;
     output.textContent = pairCipher({
       msg: value,
@@ -11,14 +11,14 @@ export default function outputFunc(message, key, decode, output, pairCipher) {
       flag: 1,
     });
   });
-  key.addEventListener('keyup', () => {
+  key.addEventListener('keyup', function () {
     const { value } = this;
     output.textContent = pairCipher({
       msg: message.value,
       key: value,
     });
   });
-  decode.addEventListener('input', () => {
+  decode.addEventListener('input', function () {
     const { value } = this;
     output.textContent = pairCipher({
       msg: value,
