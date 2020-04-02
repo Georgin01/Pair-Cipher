@@ -8,7 +8,7 @@ export default function outputFunc(message, key, decode, output, pairCipher) {
     output.textContent = pairCipher({
       msg: value,
       key: key.value,
-      flag: 1,
+      flag: true,
     });
   });
   key.addEventListener('keyup', function () {
@@ -23,7 +23,7 @@ export default function outputFunc(message, key, decode, output, pairCipher) {
     output.textContent = pairCipher({
       msg: value,
       key: key.value,
-      flag: 0,
+      flag: false,
     });
   });
 }
