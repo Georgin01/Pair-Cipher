@@ -25,7 +25,7 @@ export default function inputValidation(input) {
 
  input.key = fullTrim(input.key).toLowerCase();
 
- if (findUnique(input.key).length < 17) {
+ if (findUnique(input.key).length !== 17) {
    throw new Error('Keyword doesn\'t have enough unique characters. Need 17');
  }
 
