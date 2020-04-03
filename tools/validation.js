@@ -11,7 +11,7 @@ function fullTrim(str) {
 
 // Функция для выбора символов строки по 1. Используется для ключа
 function findUnique(str) {
-  return str.split('').filter((item, i, ar) => ar.indexOf(item) === i).join('');
+  return str.split('').filter((item, i, ar) => ar.indexOf(item) === i);
 }
 
 export default function inputValidation(input) {
